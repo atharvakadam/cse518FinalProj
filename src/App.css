@@ -1,10 +1,21 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: #282c34; 
+  min-height: 100vh;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 75px;
   pointer-events: none;
+  white-space: 'nowrap';
+  display: 'inline';
+}
+
+.App-name{
+  /* height: 25vmin;
+  pointer-events: none; */
+  white-space: 'nowrap';
+  display: 'inline';
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,13 +25,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  /* min-height: 100vh; */
+  padding-top:100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
+  font-size: 50px;
   color: white;
 }
 
@@ -35,4 +48,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.TextInput{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  /* font-size: 20px; */
+  /* width: 500px; */
+  /* height: 500px; */
+
 }
