@@ -48,9 +48,6 @@ function App() {
   const speak = () => {
     
     if (synth.speaking) {
-      // console.error('Already Speaking...')
-      // return;
-      // window.alert('Already speaking!')
       setShowSpeakAlert(true)
       return;
     }
@@ -67,13 +64,7 @@ function App() {
       speechText.onerror = e => {
         console.error('Something went wrong!')
       }
-      // selected voice
-      // if ((voice === 'Open this select menu') || (voice === '')){
-      //   window.alert('Please select a voice')
-      // }
       voicesList.forEach((eachvoice) => {
-        // console.log("Eachvoice",eachvoice.name)
-        // console.log("voice",voice)
         if (eachvoice.name === voice){
           speechText.voice = eachvoice;
         }
@@ -85,7 +76,6 @@ function App() {
       synth.speak(speechText)
 
     }
-    // if (text.value)
   }
   
   let sayitoutloud = function(msg){
