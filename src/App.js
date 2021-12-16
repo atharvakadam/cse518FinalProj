@@ -21,6 +21,7 @@ function App() {
   const handleShow = () => setShow(true);
 
   const synth = window.speechSynthesis;
+
   const allVoicesObtained = new Promise(function(resolve, reject) {
     let voices = window.speechSynthesis.getVoices();
     if (voices.length !== 0) {
@@ -32,18 +33,16 @@ function App() {
       });
     }
   });
+
   console.log(allVoicesObtained)
   
   useEffect(() => {
     const fetchAllVoices = async () => {
       const voices = await allVoicesObtained;
       setVoicesList(voices)
-      // console.log(voicesList)
     }
     fetchAllVoices();
   },[])
-
-  const body = document.querySelector('body')
   
   const speak = () => {
     
